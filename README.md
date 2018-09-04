@@ -8,3 +8,11 @@ This is a Docker image appropriate for running Spark on Kuberenetes. It produces
 In addition, there are two additional pushed images:
 * `spark-base` - This base image for `spark-master` and `spark-worker` that starts nothing.
 * `spark-driver` - This image, just like the `zeppelin` image, allows running things like `pyspark` to connect to `spark-master`, but is lighter weight than the `zeppelin` image.
+
+To Build the docker image:
+
+git clone https://github.com/wesleydias/spark-docker-images 
+cd spark-docker
+export DOCKERID=<docker-id> 
+docker image build --tag $DOCKERID/spark:2.0 . docker image ls -f reference="$DOCKERID/*" docker login 
+docker image push $DOCKERID/spark:2.0 
