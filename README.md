@@ -12,7 +12,11 @@ In addition, there are two additional pushed images:
 To Build the docker image:
 
 git clone https://github.com/wesleydias/spark-docker-images 
+
 cd spark-docker
+
 export DOCKERID=<docker-id> 
+
 docker image build --tag $DOCKERID/spark:2.0 . docker image ls -f reference="$DOCKERID/*" docker login 
+
 docker image push $DOCKERID/spark:2.0 
