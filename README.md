@@ -24,7 +24,7 @@ export DOCKERID=<docker-id>
 
 Now build the doker image.
 ```bash
-docker image build --tag $DOCKERID/spark:2.0 . docker image ls -f reference="$DOCKERID/*" docker login 
+docker image build --tag $DOCKERID/spark:2.0 . 
 ```
 
 Now push the built image to the docker repo.
